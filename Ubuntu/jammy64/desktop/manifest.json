@@ -53,7 +53,21 @@
       "artifact_id": "",
       "packer_run_uuid": "61c575bf-5618-6e66-cc69-c0de4217c212",
       "custom_data": null
+    },
+    {
+      "name": "virtualbox-iso",
+      "builder_type": "virtualbox-iso",
+      "build_time": 1661596566,
+      "files": [
+        {
+          "name": "jammy64-desktop-packer-template-virtualbox-1661595958.box",
+          "size": 1622237891
+        }
+      ],
+      "artifact_id": "virtualbox",
+      "packer_run_uuid": "983ea673-de5b-de53-006f-cc0be5a56641",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "61c575bf-5618-6e66-cc69-c0de4217c212"
+  "last_run_uuid": "983ea673-de5b-de53-006f-cc0be5a56641"
 }
