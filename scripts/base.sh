@@ -143,9 +143,12 @@ elif [[ $id == "ubuntu" ]]; then
         sudo apt-get install -y python-minimal
     fi
     sudo apt-get install -y linux-headers-"$(uname -r)" \
-        build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev unzip
+        build-essential zlib1g-dev libssl-dev unzip
     if [[ ! -f /etc/vyos_build ]]; then
         sudo apt-get -y install cloud-initramfs-growroot
+    fi
+    if [[ $os_version_id_short -ne 22.04 ]]; then
+        libreadline-gplv2-dev
     fi
 fi
 

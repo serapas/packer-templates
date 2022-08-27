@@ -1,6 +1,6 @@
 {
   "boot_command_prefix": "",
-  "iso_checksum": "c396e956a9f52c418397867d1ea5c0cf1a99a49dcf648b086d2fb762330cc88d",
-  "iso_url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.1-desktop-amd64.iso",
+  "iso_checksum": "10f19c5b2b8d6db711582e0e27f5116296c34fe4b313ba45f9b201a5007056cb",
+  "iso_url": "https://releases.ubuntu.com/22.04/ubuntu-22.04.1-live-server-amd64.iso",
   "vm_name": "jammy64-desktop-packer-template"
 }
