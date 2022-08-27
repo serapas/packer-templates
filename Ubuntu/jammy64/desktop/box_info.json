@@ -1,0 +1,8 @@
+{
+  "auto_build": "True",
+  "box_name": "jammy64-desktop",
+  "box_tag": "mrlesmithjr/jammy64-desktop",
+  "description": "Ubuntu 22.04 (Jammy Jellyfish) Desktop",
+  "private": "False",
+  "short_description": "Ubuntu Jammy Desktop"
+}
