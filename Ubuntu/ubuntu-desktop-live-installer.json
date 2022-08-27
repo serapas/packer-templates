@@ -33,11 +33,14 @@
     {
       "boot_command": [
         "<esc><esc><esc>",
-        "<enter><wait>",
+        "c<wait>",
+        "linux ",
         "/casper/vmlinuz ",
-        "root=/dev/sr0 ",
-        "initrd=/casper/initrd ",
-        "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ubuntu/",
+        "autoinstall 'ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ubuntu/'",
+        "<enter>",
+        "initrd /casper/initrd ",
+        "<enter>",
+        "boot",
         "<enter>"
       ],
       "boot_wait": "5s",
@@ -45,7 +48,7 @@
       "disk_size": "{{ user `disk_size` }}",
       "guest_os_type": "Ubuntu_64",
       "hard_drive_interface": "{{ user `disk_adapter_type` }}",
-      "headless": true,
+      "headless": false,
       "http_directory": "http",
       "iso_checksum": "{{ user `iso_checksum` }}",
       "iso_url": "{{ user `iso_url` }}",
@@ -100,12 +103,6 @@
         "compression_level": "{{ user `compression_level` }}",
         "output": "{{ user `vm_name` }}-{{.Provider}}-{{ timestamp }}.box",
         "type": "vagrant"
-      },
-      {
-        "access_token": "{{ user `vagrant_cloud_token` }}",
-        "box_tag": "{{ user `box_tag` }}",
-        "type": "vagrant-cloud",
-        "version": "{{ timestamp }}"
       },
       {
         "output": "manifest.json",
